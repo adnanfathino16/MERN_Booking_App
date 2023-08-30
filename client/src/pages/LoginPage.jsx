@@ -13,10 +13,14 @@ const LoginPage = () => {
   const handleLoginSubmit = async (e) => {
     e.preventDefault();
     try {
-      const userData = await axios.post("/user/login", {
-        email,
-        password,
-      });
+      const userData = await axios.post(
+        "/user/login",
+        {
+          email,
+          password,
+        },
+        { withCredentials: true }
+      );
       setUser(userData.data);
       alert("Berhasil login");
       setRedirect(true);
