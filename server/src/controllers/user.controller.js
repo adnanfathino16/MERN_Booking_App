@@ -21,7 +21,14 @@ export const loginUser = async (req, res) => {
     if (!checkPw) return res.status(422).json("email atau password salah");
 
     const accessToken = signJWT({ email: user.email, id: user._id }, { expiresIn: "1d" });
-    return res.cookie("token", accessToken).json(user);
+    return res
+      .cookie("token", accessToken, {
+        maxAge: 3600000,
+        httpOnly: true,
+        secure: true,
+        sameSite: "strict",
+      })
+      .json(user);
   } else {
     return res.status(422).json("email atau password salah");
   }

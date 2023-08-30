@@ -19,7 +19,7 @@ app.use("/uploads", express.static("uploads"));
 app.use(
   cors({
     credentials: true,
-    origin: "http://localhost:5173",
+    origin: "https://adn-booking-app.vercel.app",
     methods: "GET, PUT, POST, DELETE", // Atur metode HTTP yang diperbolehkan
     allowedHeaders: "Content-Type, Authorization", // Atur header yang diperbolehkan
   })
