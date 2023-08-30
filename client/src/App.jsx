@@ -12,7 +12,7 @@ import PlaceByIdPage from "./pages/PlaceByIdPage";
 import BookingsPage from "./pages/BookingsPage";
 import BookingPage from "./pages/BookingPage";
 
-axios.defaults.baseURL = "http://localhost:8000";
+axios.defaults.baseURL = "https://api-booking-app-production.up.railway.app";
 axios.defaults.withCredentials = true;
 
 const App = () => {

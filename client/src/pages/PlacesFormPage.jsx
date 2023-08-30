@@ -81,7 +81,7 @@ const PlacesFormPage = () => {
   };
 
   if (redirect) {
-    return <Navigate to={"/account/places"} />; //terakhir disini 4:06
+    return <Navigate to={"/account/places"} />;
   }
   return (
     <div>

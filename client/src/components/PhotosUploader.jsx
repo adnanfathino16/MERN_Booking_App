@@ -63,7 +63,7 @@ const PhotosUploader = ({ addedPhotos, onChange }) => {
         {addedPhotos.length > 0 &&
           addedPhotos.map((link, index) => (
             <div className="h-32 flex relative" key={index}>
-              <img className="rounded-2xl w-full object-cover" src={`http://localhost:8000/uploads/${link}`} alt={link} />
+              <img className="rounded-2xl w-full object-cover" src={`https://api-booking-app-production.up.railway.app/uploads/${link}`} alt={link} />
               <button onClick={(e) => removePhoto(e, link)} className="cursor-pointer absolute bottom-1 right-1 text-white bg-black bg-opacity-50 rounded-2xl py-2 px-3">
                 <GoTrash />
               </button>
