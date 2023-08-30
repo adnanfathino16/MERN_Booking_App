@@ -14,7 +14,9 @@ const IndexPage = () => {
       {places.length > 0 &&
         places.map((place, index) => (
           <Link to={`/place/${place._id}`} key={index}>
-            <div className="bg-gray-500 mb-2 rounded-2xl flex">{place.photos?.[0] && <img className="rounded-2xl aspect-square object-cover" src={`http://localhost:8000/uploads/${place.photos?.[0]}`} alt="" />}</div>
+            <div className="bg-gray-500 mb-2 rounded-2xl flex">
+              {place.photos?.[0] && <img className="rounded-2xl aspect-square object-cover" src={`https://api-booking-app-production.up.railway.app/uploads/${place.photos?.[0]}`} alt="" />}
+            </div>
             <h3 className="font-bold">{place.address}</h3>
             <h2 className="text-sm truncate text-gray-400">{place.title}</h2>
             <div className="mt-1">
