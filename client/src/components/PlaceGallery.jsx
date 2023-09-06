@@ -18,7 +18,7 @@ const PlaceGallery = ({ place }) => {
           {place?.photos?.length > 0 &&
             place.photos.map((photo) => (
               <div>
-                <img src={`http://localhost:8000/uploads/${photo}`} className="w-full" alt="" />
+                <img src={`https://api-booking-app-production.up.railway.app/uploads/${photo}`} className="w-full" alt="" />
               </div>
             ))}
         </div>
@@ -30,12 +30,16 @@ const PlaceGallery = ({ place }) => {
     <div className="relative">
       <div className="grid gap-2 grid-cols-[2fr_1fr] rounded-3xl overflow-hidden">
         <div>
-          <div>{place.photos?.[0] && <img onClick={() => setShowAllPhotos(true)} className="w-full cursor-pointer aspect-square object-cover" src={`http://localhost:8000/uploads/${place.photos?.[0]}`} alt="" />}</div>
+          <div>
+            {place.photos?.[0] && <img onClick={() => setShowAllPhotos(true)} className="w-full cursor-pointer aspect-square object-cover" src={`https://api-booking-app-production.up.railway.app/uploads/${place.photos?.[0]}`} alt="" />}
+          </div>
         </div>
         <div className="grid ">
-          {place.photos?.[1] && <img onClick={() => setShowAllPhotos(true)} className="w-full cursor-pointer aspect-square object-cover" src={`http://localhost:8000/uploads/${place.photos?.[1]}`} alt="" />}
+          {place.photos?.[1] && <img onClick={() => setShowAllPhotos(true)} className="w-full cursor-pointer aspect-square object-cover" src={`https://api-booking-app-production.up.railway.app/uploads/${place.photos?.[1]}`} alt="" />}
           <div className="overflow-hidden">
-            {place.photos?.[2] && <img onClick={() => setShowAllPhotos(true)} className="w-full cursor-pointer aspect-square object-cover relative top-2" src={`http://localhost:8000/uploads/${place.photos?.[2]}`} alt="" />}
+            {place.photos?.[2] && (
+              <img onClick={() => setShowAllPhotos(true)} className="w-full cursor-pointer aspect-square object-cover relative top-2" src={`https://api-booking-app-production.up.railway.app/uploads/${place.photos?.[2]}`} alt="" />
+            )}
           </div>
         </div>
       </div>

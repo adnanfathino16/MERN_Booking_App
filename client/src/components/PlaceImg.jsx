@@ -6,7 +6,7 @@ const PlaceImg = ({ place, index = 0, className = null }) => {
     className = "h-full object-cover";
   }
 
-  return <img className={className} src={`http://localhost:8000/uploads/${place.photos[index]}`} alt="" />;
+  return <img className={className} src={`https://api-booking-app-production.up.railway.app/uploads/${place.photos[index]}`} alt="" />;
 };
 
 export default PlaceImg;

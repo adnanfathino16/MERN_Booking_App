@@ -26,7 +26,7 @@ export const loginUser = async (req, res) => {
         maxAge: 3600000,
         httpOnly: true,
         secure: true,
-        sameSite: "strict",
+        sameSite: "none",
       })
       .json(user);
   } else {
